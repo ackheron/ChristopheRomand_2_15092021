@@ -7,68 +7,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservia</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/bc4fad6d34.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <nav id="top-navbar">
 
+    <header>
+
+        <div id="top-logo">
+            <a href="#"><img src="/sources/images/logo/Reservia.svg" alt="Logo de Reservia" /></a>
+        </div>
+        <nav id="top-navbar">
+            <ul>
+                <li class="nav-link"><a href="#lodging">Hébergements</a> </li>
+                <li class="nav-link"><a href="#activity">Activités</a> </li>
+                <li class=""><a href="#">S'inscrire</a> </li>
+            </ul>
         </nav>
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p>En plein centre ville ou en pleine nature</p>
 
     </header>
 
-    <section id="search">
-        <div id="search-input">
-
-        </div>
-        <div id="seach-filter">
-
-        </div>
-        <div id="search_info">
-
-        </div>
-
-    </section>
-
     <main>
+
+        <section id="search">
+            <div id="searchTitle">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+            </div>
+            <div id="searchSection">
+                <label for="searchInput"><i class="fas fa-map-marker-alt"></i></label>
+                <input type="search" name="searchInput" id="searchInput" placeholder="Marseille, France" />
+                <button id="searchButton"><span>Rechercher</span><i class="fas fa-search"></i></button>
+            </div>
+            <div id="seachFilter">
+                <h4>Filtres</h4>
+                <ul>
+                    <li class="filterItems"><i class="fas fa-money-bill-wave"></i>Économique</li>
+                    <li class="filterItems"><i class="fas fa-child"></i>Familial</li>
+                    <li class="filterItems"><i class="fas fa-heart"></i>Romantique</li>
+                    <li class="filterItems"><i class="fas fa-dog"></i>Animaux autorisés</li>
+                </ul>
+            </div>
+            <div id="searchInfo">
+                <i class="fas fa-info"></i>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </section>
+
         <section id="lodging">
             <h2>Hébergements à Marseille</h2>
             <div class="thumbnail-container">
 
-            </div>
+                <div class="thumbnail">
+                    <a href="/sources/images/hebergements/1_xlarge/cannebière.jpg" target="_blank">
+                        <figure>
+                            <img src="/sources/images/hebergements/4_small/cannebière.jpg"
+                                alt="Auberge la cannebière" />
+                            <figcaption>
+                                <h4>Auberge de la cannebière</h4>
+                                <p>Nuit à partir de 25€</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="/sources/images/hebergements/1_xlarge/hôtelDuPort.jpg" target="_blank">
+                        <figure>
+                            <img src="/sources/images/hebergements/4_small/hôtelDuPort.jpg"
+                                alt="Auberge la cannebière" />
+                            <figcaption>
+                                <h4>Hôtel du port</h4>
+                                <p>Nuit à partir de 52€</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="/sources/images/hebergements/1_xlarge/cannebière.jpg" target="_blank">
+                        <figure>
+                            <img src="/sources/images/hebergements/4_small/cannebière.jpg"
+                                alt="Auberge la cannebière" />
+                            <figcaption>
+                                <h4>Auberge de la cannebière</h4>
+                                <p>Nuit à partir de 25€</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="/sources/images/hebergements/1_xlarge/cannebière.jpg" target="_blank">
+                        <figure>
+                            <img src="/sources/images/hebergements/4_small/cannebière.jpg"
+                                alt="Auberge la cannebière" />
+                            <figcaption>
+                                <h4>Auberge de la cannebière</h4>
+                                <p>Nuit à partir de 25€</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="/sources/images/hebergements/1_xlarge/cannebière.jpg" target="_blank">
+                        <figure>
+                            <img src="/sources/images/hebergements/4_small/cannebière.jpg"
+                                alt="Auberge la cannebière" />
+                            <figcaption>
+                                <h4>Auberge de la cannebière</h4>
+                                <p>Nuit à partir de 25€</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="thumbnail">
+                    <a href="/sources/images/hebergements/1_xlarge/cannebière.jpg" target="_blank">
+                        <figure>
+                            <img src="/sources/images/hebergements/4_small/cannebière.jpg"
+                                alt="Auberge la cannebière" />
+                            <figcaption>
+                                <h4>Auberge de la cannebière</h4>
+                                <p>Nuit à partir de 25€</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
 
+            </div>
+            <p>Afficher plus</p>
         </section>
         <aside>
             <div id="popular-title">
-                <h2>Les plus populaires</h2>
-
+                <h3>Les plus populaires</h3>
             </div>
-
+            <div class="thumbnail-container">
+            </div>
         </aside>
-
+        <section id="activity">
+            <h3>Activités à Marseille</h3>
+            <div class="activity-container">
+            </div>
+        </section>
     </main>
-
-    <section id="activity">
-        <h2>Activités à Marseille</h2>
-        <div class="activity-container">
-
-        </div>
-
-    </section>
 
     <footer>
         <nav class="footer-nav">
-            <h3>A propos</h3>
+            <h4>A propos</h4>
             <ul></ul>
         </nav>
         <nav class="footer-nav">
-            <h3>Nos hébergements</h3>
+            <h4>Nos hébergements</h4>
             <ul></ul>
         </nav>
         <nav class="footer-nav">
-            <h3>Assistance</h3>
+            <h4>Assistance</h4>
             <ul></ul>
         </nav>
 
