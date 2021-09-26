@@ -40,9 +40,9 @@
                 <input type="search" name="searchInput" id="searchInput" placeholder="Marseille, France" />
                 <button id="searchButton"><span>Rechercher</span><i class="fas fa-search"></i></button>
             </div>
-            <div id="seachFilter">
+            <div class="searchFilter">
                 <h4>Filtres</h4>
-                <ul>
+                <ul class="searchFilter">
                     <li class="filterItems"><i class="fas fa-money-bill-wave"></i>Économique</li>
                     <li class="filterItems"><i class="fas fa-child"></i>Familial</li>
                     <li class="filterItems"><i class="fas fa-heart"></i>Romantique</li>
@@ -154,7 +154,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star, emptyStar"></i>
                                     </span>
                                 </div>
                             </figcaption>
@@ -195,7 +195,7 @@
                 <div class="card">
                     <a href="/sources/images/hebergements/1_xlarge/soleilDuMatin.jpg" target="_blank">
                         <figure>
-                            <img src="/sources/images/hebergements/4_small/soleilDuMatin.jpg"
+                            <img class="imgPopular" src="/sources/images/hebergements/4_small/soleilDuMatin.jpg"
                                 alt="Hôtel le soleil du matin" />
                             <figcaption>
                                 <h4>Hôtel le soleil du matin</h4>
@@ -216,7 +216,7 @@
                 <div class="card">
                     <a href="/sources/images/hebergements/1_xlarge/auCoeurDeLeau.jpg" target="_blank">
                         <figure>
-                            <img src="/sources/images/hebergements/4_small/auCoeurDeLeau.jpg"
+                            <img class="imgPopular" src="/sources/images/hebergements/4_small/auCoeurDeLeau.jpg"
                                 alt="Au cœur de l'eau Chambres d'hôtes" />
                             <figcaption>
                                 <h4>Au cœur de l'eau Chambres d'hôtes</h4>
@@ -237,7 +237,7 @@
                 <div class="card">
                     <a href="/sources/images/hebergements/1_xlarge/toutBleuToutBlanc.jpg" target="_blank">
                         <figure>
-                            <img src="/sources/images/hebergements/4_small/toutBleuToutBlanc.jpg"
+                            <img class="imgPopular" src="/sources/images/hebergements/4_small/toutBleuToutBlanc.jpg"
                                 alt="Hôtel Tout bleu et Blanc" />
                             <figcaption>
                                 <h4>Hôtel Tout bleu et Blanc</h4>
@@ -257,69 +257,79 @@
                 </div>
             </div>
         </aside>
+
         <section id="activity">
             <h3>Activités à Marseille</h3>
-            <div class="container">
-                <div class="card">
-                    <a href="/sources/images/activites/1_xlarge/vieuxPort.jpg" target="_blank">
-                        <figure>
-                            <img src="/sources/images/activites/4_small/vieuxPort.jpg" alt="Vieux port" />
-                            <figcaption>
-                                <h4>Vieux port</h4>
-                            </figcaption>
-                        </figure>
-                    </a>
+            <div class="gridActivity">
+                <div class="container1">
+                    <div class="card">
+                        <a href="/sources/images/activites/1_xlarge/vieuxPort.jpg" target="_blank">
+                            <figure>
+                                <img class="imgTest" src="/sources/images/activites/4_small/vieuxPort.jpg"
+                                    alt="Vieux port" />
+                                <figcaption class="test">
+                                    <h4>Vieux port</h4>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/sources/images/activites/1_xlarge/pomègues.jpg" target="_blank">
+                            <figure>
+                                <img class="imgTest" src="/sources/images/activites/4_small/pomègues.jpg"
+                                    alt="Fort de Pomègues" />
+                                <figcaption class="test">
+                                    <h4>Fort de Pomègues</h4>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/sources/images/activites/1_xlarge/frioul.jpg" target="_blank">
+                            <figure>
+                                <img class="imgTest" src="/sources/images/activites/4_small/frioul.jpg"
+                                    alt="Îles de Frioul" />
+                                <figcaption class="test">
+                                    <h4>Îles de Frioul</h4>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
                 </div>
-                <div class="card">
-                    <a href="/sources/images/activites/1_xlarge/pomègues.jpg" target="_blank">
-                        <figure>
-                            <img src="/sources/images/activites/4_small/pomègues.jpg" alt="Fort de Pomègues" />
-                            <figcaption>
-                                <h4>Fort de Pomègues</h4>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="/sources/images/activites/1_xlarge/frioul.jpg" target="_blank">
-                        <figure>
-                            <img src="/sources/images/activites/4_small/frioul.jpg" alt="Îles de Frioul" />
-                            <figcaption>
-                                <h4>Îles de Frioul</h4>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="/sources/images/activites/1_xlarge/calanques.jpg" target="_blank">
-                        <figure>
-                            <img src="/sources/images/activites/4_small/calanques.jpg"
-                                alt="Parc National des Calanques" />
-                            <figcaption>
-                                <h4>Parc National des Calanques</h4>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="/sources/images/activites/1_xlarge/laGarde.jpg" target="_blank">
-                        <figure>
-                            <img src="/sources/images/activites/4_small/laGarde.jpg" alt="Notre-Dame-de-la-Garde" />
-                            <figcaption>
-                                <h4>Notre-Dame-de-la-Garde</h4>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="/sources/images/activites/1_xlarge/longchamp.jpg" target="_blank">
-                        <figure>
-                            <img src="/sources/images/activites/4_small/longchamp.jpg" alt="Parc Longchamp" />
-                            <figcaption>
-                                <h4>Parc Longchamp</h4>
-                            </figcaption>
-                        </figure>
-                    </a>
+                <div class="container2">
+                    <div class="card">
+                        <a href="/sources/images/activites/1_xlarge/calanques.jpg" target="_blank">
+                            <figure>
+                                <img class="imgTest" src="/sources/images/activites/4_small/calanques.jpg"
+                                    alt="Parc National des Calanques" />
+                                <figcaption class="test">
+                                    <h4>Parc National des Calanques</h4>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/sources/images/activites/1_xlarge/laGarde.jpg" target="_blank">
+                            <figure>
+                                <img class="imgTest" src="/sources/images/activites/4_small/laGarde.jpg"
+                                    alt="Notre-Dame-de-la-Garde" />
+                                <figcaption class="test">
+                                    <h4>Notre-Dame-de-la-Garde</h4>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/sources/images/activites/1_xlarge/longchamp.jpg" target="_blank">
+                            <figure>
+                                <img class="imgTest" src="/sources/images/activites/4_small/longchamp.jpg"
+                                    alt="Parc Longchamp" />
+                                <figcaption class="test">
+                                    <h4>Parc Longchamp</h4>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

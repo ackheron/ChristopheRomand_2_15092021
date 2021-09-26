@@ -33,6 +33,17 @@ input {
   background: transparent;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blueStars {
+  font-size: 0.7rem;
+  color: var(--blue);
+}
+
 /****** Début partie HEADER ******/
 
 header {
@@ -52,10 +63,11 @@ header {
   flex-direction: column;
   justify-content: center;
   height: 120px;
-  padding: 10px;
-  margin: 0 25px;
+  margin-left: 50px;
 }
-
+li .registerLink {
+  margin-right: 0;
+}
 .registerLink a {
   color: var(--blue);
   font-weight: 700;
@@ -65,14 +77,16 @@ header {
 main {
   padding: 0 55px;
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 35px;
 }
 main img {
   width: 100%;
 }
 
 #search {
-  grid-column: 1 / span 6;
+  grid-column: 1 / 3;
+  margin-bottom: 40px;
 }
 
 #searchTitle h1 {
@@ -86,7 +100,7 @@ main img {
   border: solid 1px var(--grey);
   border-radius: 15px;
   overflow: hidden;
-  margin: 20px 0;
+  margin: 20px 0 30px 0;
 }
 
 #searchSection label {
@@ -118,25 +132,223 @@ main img {
   display: none;
 }
 
+.searchFilter {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  height: 50px;
+}
+
+.filterItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  padding-right: 15px;
+  border: solid 2px var(--grey);
+  border-radius: 40px;
+  height: 50px;
+}
+
+.filterItems i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  margin-right: 15px;
+  height: 50px;
+  width: 50px;
+  border: solid 0px var(--grey);
+  border-radius: 50%;
+  background-color: var(--blueLight);
+  color: var(--blue);
+}
+
+#searchInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 15px;
+}
+#searchInfo i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 23px;
+  height: 23px;
+  font-size: 0.7rem;
+  border: solid 2px var(--grey);
+  border-radius: 50%;
+  color: var(--blue);
+  margin-right: 1rem;
+}
+/***************************/
+#lodging {
+  grid-column: 1 / 2;
+  background-color: var(--grey);
+  border-radius: 20px;
+  padding: 50px 40px;
+  padding-bottom: 0px; /**********A revoir*********/
+  margin-bottom: 60px;
+}
+
+#lodging h2 {
+  margin-bottom: 30px;
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
-.card {
+.card-container .card {
   width: 240px;
   height: 200px;
-  margin: auto 15px;
-  border: solid 1px black;
+  margin-bottom: 30px;
+  border: solid 5px white;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.card img {
+.card-container .card img {
   height: 115px;
 }
 
-#lodging {
-  grid-column: 1 / span 2;
+aside {
+  grid-column: 2 / 3;
+  background-color: var(--grey);
+  border-radius: 20px;
+  padding: 50px;
+
+  padding-bottom: 0px; /*********A revoir********/
+
+  margin-bottom: 60px;
+}
+#popular-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
 }
 
-aside {
-  grid-column: 4 / 7;
+#popular-title > i {
+  font-size: 1.3rem;
+}
+
+aside .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside .container .card {
+  max-width: 340px;
+  max-height: 140px;
+  margin-bottom: 30px;
+  border: solid 5px white;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.imgPopular {
+  width: 130px;
+  height: 140px;
+}
+aside .container .card a figure {
+  display: flex;
+}
+/****************************************************/
+
+#activity {
+  grid-column: 1 / 3;
+}
+#activity h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.gridActivity {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.4fr 1fr;
+  gap: 40px;
+}
+.gridActivity .container1 :nth-child(1) {
+  grid-column-start: 1;
+
+  grid-row-start: 1;
+
+  grid-row-end: span 2;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+}
+
+.gridActivity .container2 :nth-child(1) {
+  grid-column-start: 1;
+
+  grid-row-start: 1;
+
+  grid-row-end: span 2;
+}
+
+/********************test****************/
+
+.container1 .card {
+  height: 100%;
+  min-height: 150px;
+  padding: 0 0 5px 0;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.301);
+  position: relative;
+  overflow: hidden;
+}
+.container2 .card {
+  height: 100%;
+  min-height: 150px;
+  padding: 0 0 5px 0;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.301);
+  position: relative;
+  overflow: hidden;
+}
+
+/* section .card-img {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+} */
+
+.imgTest {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.test {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  border-radius: 0 0 25px 25px;
+  padding: 20px 10px 20px 20px;
 }
