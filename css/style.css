@@ -33,15 +33,14 @@ input {
   background: transparent;
 }
 
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .blueStars {
   font-size: 0.7rem;
   color: var(--blue);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 /****** Début partie HEADER ******/
@@ -63,17 +62,23 @@ header {
   flex-direction: column;
   justify-content: center;
   height: 120px;
-  margin-left: 50px;
+  padding: 0 30px;
+  margin-left: 15px;
 }
-li .registerLink {
-  margin-right: 0;
+.navLinkLodg {
+  border-top: solid 2px var(--blue);
 }
+.navLinkLodg a {
+  color: var(--blue);
+}
+
 .registerLink a {
   color: var(--blue);
   font-weight: 700;
 }
 
-/****** Fin partie HEADER ******/
+/****** Réglages du MAIN ******/
+
 main {
   padding: 0 55px;
   display: grid;
@@ -83,6 +88,8 @@ main {
 main img {
   width: 100%;
 }
+
+/****** Section recherche ******/
 
 #search {
   grid-column: 1 / 3;
@@ -111,6 +118,10 @@ main img {
   background-color: var(--grey);
 }
 
+#searchSection label:hover {
+  cursor: pointer;
+}
+
 #searchSection input {
   width: 235px;
   padding-left: 15px;
@@ -119,14 +130,19 @@ main img {
   color: black;
 }
 
-#searchSection button {
+#searchButton {
   width: 135px;
   background-color: var(--blue);
   font-size: 1em;
   font-weight: 700;
+  border-radius: 0 15px 15px 0;
   color: white;
 }
 
+#searchButton:hover {
+  cursor: pointer;
+  border: solid 5px var(--blueLight);
+}
 .fas.fa-search {
   /*** Icône loupe recherche caché ***/
   display: none;
@@ -143,11 +159,18 @@ main img {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
   margin: 0 15px;
   padding-right: 15px;
   border: solid 2px var(--grey);
   border-radius: 40px;
   height: 50px;
+}
+
+.filterItems:hover {
+  background-color: var(--blueLight);
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .filterItems i {
@@ -158,10 +181,15 @@ main img {
   margin-right: 15px;
   height: 50px;
   width: 50px;
-  border: solid 0px var(--grey);
+  /* border: solid 0px var(--grey); */
   border-radius: 50%;
   background-color: var(--blueLight);
   color: var(--blue);
+}
+
+.filterItems i:hover {
+  background-color: white;
+  transition: 0.5s;
 }
 
 #searchInfo {
@@ -174,7 +202,6 @@ main img {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 23px;
   height: 23px;
   font-size: 0.7rem;
@@ -183,7 +210,9 @@ main img {
   color: var(--blue);
   margin-right: 1rem;
 }
-/***************************/
+
+/****** Section Hébergements ******/
+
 #lodging {
   grid-column: 1 / 2;
   background-color: var(--grey);
@@ -202,12 +231,13 @@ main img {
   justify-content: space-around;
 }
 .card-container .card {
-  width: 240px;
+  width: 245px;
   height: 200px;
   margin-bottom: 30px;
   border: solid 5px white;
   background-color: white;
   border-radius: 20px;
+  box-shadow: 0px 4px 20px #999;
   overflow: hidden;
 }
 
@@ -215,14 +245,33 @@ main img {
   height: 115px;
 }
 
+.card-body {
+  padding: 7px 7px 3px 7px;
+}
+.card-body h4 {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.more {
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/****** Section "populaires" ******/
+
 aside {
   grid-column: 2 / 3;
   background-color: var(--grey);
   border-radius: 20px;
   padding: 50px;
-
   padding-bottom: 0px; /*********A revoir********/
-
   margin-bottom: 60px;
 }
 #popular-title {
@@ -250,6 +299,8 @@ aside .container .card {
   border: solid 5px white;
   background-color: white;
   border-radius: 20px;
+  box-shadow: 0px 4px 20px #999;
+
   overflow: hidden;
 }
 .imgPopular {
@@ -259,10 +310,12 @@ aside .container .card {
 aside .container .card a figure {
   display: flex;
 }
-/****************************************************/
+
+/****** Section activités ******/
 
 #activity {
   grid-column: 1 / 3;
+  margin-bottom: 60px;
 }
 #activity h3 {
   font-size: 1.5rem;
@@ -273,66 +326,55 @@ aside .container .card a figure {
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
 }
-.container1 {
+.grid-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1.4fr 1fr;
   gap: 40px;
 }
-.gridActivity .container1 :nth-child(1) {
+.gridActivity .grid-1 :nth-child(1) {
   grid-column-start: 1;
-
   grid-row-start: 1;
-
   grid-row-end: span 2;
 }
 
-.container2 {
+.grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 40px;
 }
 
-.gridActivity .container2 :nth-child(1) {
+.gridActivity .grid-2 :nth-child(1) {
   grid-column-start: 1;
-
   grid-row-start: 1;
-
   grid-row-end: span 2;
 }
 
 /********************test****************/
 
-.container1 .card {
+.grid-1 .card {
   height: 100%;
-  min-height: 150px;
+  min-height: 180px;
   padding: 0 0 5px 0;
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: white;
-  box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.301);
+  box-shadow: 0px 4px 20px #999;
   position: relative;
   overflow: hidden;
 }
-.container2 .card {
+.grid-2 .card {
   height: 100%;
-  min-height: 150px;
+  min-height: 180px;
   padding: 0 0 5px 0;
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: white;
-  box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.301);
+  box-shadow: 0px 4px 20px #999;
   position: relative;
   overflow: hidden;
 }
 
-/* section .card-img {
-  min-height: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-} */
-
-.imgTest {
+.card-img-activity {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -343,7 +385,7 @@ aside .container .card a figure {
   transform: translate(-50%, -50%);
 }
 
-.test {
+.card-body-activity {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -351,4 +393,29 @@ aside .container .card a figure {
   width: 100%;
   border-radius: 0 0 25px 25px;
   padding: 20px 10px 20px 20px;
+}
+
+/****** FOOTER ******/
+
+.mainFooter {
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  min-height: 220px;
+  padding: 50px;
+  background-color: var(--grey);
+}
+
+.footerNav {
+  width: 450px;
+  margin-right: auto;
+}
+
+.footerTitle {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.footerNav a {
+  display: block;
+  margin-bottom: 10px;
 }
