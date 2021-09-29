@@ -45,14 +45,15 @@ input {
   transition: 0.3s;
 }
 
-/****** Début partie HEADER ******/
+/******  HEADER ******/
 
 header {
-  height: 120px;
+  min-height: 120px;
   padding: 0 55px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #topNavbar ul {
@@ -146,6 +147,7 @@ main img {
   cursor: pointer;
   border: solid 5px var(--blueLight);
 }
+
 .fas.fa-search {
   /*** Icône loupe recherche caché ***/
   display: none;
@@ -153,10 +155,18 @@ main img {
 
 .searchFilter {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   padding: 10px;
   align-items: center;
-  height: 50px;
+  min-height: 50px;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-items: center;
+  min-height: 50px;
 }
 
 .filterItems {
@@ -178,15 +188,15 @@ main img {
 }
 
 .filterItems i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   background-color: var(--blueLight);
   color: var(--blue);
+  display: inline-block;
+  text-align: center;
+  padding: 17px 0;
+  margin-right: 15px;
 }
 
 .filterItems i:hover {
@@ -431,3 +441,35 @@ aside .container .card a figure {
 }
 
 /****** MEDIA QUERIES ******/
+
+@media (max-width: 1200px) {
+  main {
+    padding: 0 55px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 35px;
+  }
+
+  #search {
+    grid-column: 1;
+    margin-bottom: 40px;
+  }
+
+  #lodging {
+    grid-column: 1;
+    background-color: var(--grey);
+    border-radius: 20px;
+    padding: 50px 40px;
+    padding-bottom: 0px; /**********A revoir*********/
+    margin-bottom: 60px;
+  }
+
+  aside {
+    grid-column: 1;
+    background-color: var(--grey);
+    border-radius: 20px;
+    padding: 50px;
+    padding-bottom: 0px; /*********A revoir********/
+    margin-bottom: 60px;
+  }
+}
