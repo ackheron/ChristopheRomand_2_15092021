@@ -6,6 +6,8 @@
   --grey: #f2f2f2;
 }
 
+/****** Réglages généraux ******/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -87,6 +89,7 @@ main {
 }
 main img {
   width: 100%;
+  object-fit: cover;
 }
 
 /****** Section recherche ******/
@@ -150,6 +153,7 @@ main img {
 
 .searchFilter {
   display: flex;
+  /* flex-wrap: wrap; */
   padding: 10px;
   align-items: center;
   height: 50px;
@@ -177,11 +181,9 @@ main img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 15px;
   margin-right: 15px;
   height: 50px;
   width: 50px;
-  /* border: solid 0px var(--grey); */
   border-radius: 50%;
   background-color: var(--blueLight);
   color: var(--blue);
@@ -311,6 +313,15 @@ aside .container .card a figure {
   display: flex;
 }
 
+.card-body {
+  position: relative;
+}
+
+.popStar {
+  position: absolute;
+  bottom: 17px;
+}
+
 /****** Section activités ******/
 
 #activity {
@@ -332,7 +343,7 @@ aside .container .card a figure {
   grid-template-rows: 1.4fr 1fr;
   gap: 40px;
 }
-.gridActivity .grid-1 :nth-child(1) {
+.grid-1 :nth-child(1) {
   grid-column-start: 1;
   grid-row-start: 1;
   grid-row-end: span 2;
@@ -345,7 +356,7 @@ aside .container .card a figure {
   gap: 40px;
 }
 
-.gridActivity .grid-2 :nth-child(1) {
+.grid-2 :nth-child(1) {
   grid-column-start: 1;
   grid-row-start: 1;
   grid-row-end: span 2;
@@ -356,9 +367,9 @@ aside .container .card a figure {
 .grid-1 .card {
   height: 100%;
   min-height: 180px;
-  padding: 0 0 5px 0;
+  /* padding: 0 0 5px 0; */
   border-radius: 25px;
-  background-color: white;
+  /* background-color: white; */
   box-shadow: 0px 4px 20px #999;
   position: relative;
   overflow: hidden;
@@ -377,18 +388,17 @@ aside .container .card a figure {
 .card-img-activity {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   position: absolute;
   border-radius: 25px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
 }
 
 .card-body-activity {
   position: absolute;
   bottom: 0;
-  left: 0;
+  /* left: 0; */
   background: white;
   width: 100%;
   border-radius: 0 0 25px 25px;
@@ -419,3 +429,5 @@ aside .container .card a figure {
   display: block;
   margin-bottom: 10px;
 }
+
+/****** MEDIA QUERIES ******/
