@@ -58,6 +58,7 @@ header {
 
 #topNavbar ul {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #topNavbar li {
@@ -106,7 +107,7 @@ main img {
 
 #searchSection {
   display: flex;
-  width: 420px;
+  max-width: 420px;
   height: 50px;
   border: solid 1px var(--grey);
   border-radius: 15px;
@@ -305,8 +306,8 @@ aside .container {
 }
 
 aside .container .card {
-  max-width: 340px;
-  max-height: 140px;
+  width: 340px;
+  height: 140px;
   margin-bottom: 30px;
   border: solid 5px white;
   background-color: white;
@@ -444,19 +445,25 @@ aside .container .card a figure {
 
 @media (max-width: 1200px) {
   main {
-    padding: 0 55px;
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 1fr;
-    column-gap: 35px;
+    column-gap: 0rem;
+    grid-template-areas:
+      "search"
+      "aside"
+      "lodging";
+    padding: 0 55px;
   }
 
   #search {
     grid-column: 1;
+    grid-area: search;
     margin-bottom: 40px;
   }
 
   #lodging {
     grid-column: 1;
+    grid-area: lodging;
     background-color: var(--grey);
     border-radius: 20px;
     padding: 50px 40px;
@@ -466,10 +473,139 @@ aside .container .card a figure {
 
   aside {
     grid-column: 1;
+    grid-area: aside;
     background-color: var(--grey);
     border-radius: 20px;
     padding: 50px;
     padding-bottom: 0px; /*********A revoir********/
     margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  header,
+  main {
+    padding: 0 1rem;
+  }
+
+  .filterItems {
+    margin-left: 0px;
+    margin-bottom: 0.9rem;
+  }
+  .itemsContainer {
+    padding: 10px 0;
+  }
+  .card-container .card {
+    min-width: 45%;
+  }
+
+  aside .container {
+    align-items: center;
+  }
+  aside .container .card {
+    width: 100%;
+  }
+
+  .gridActivity {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container .card {
+    width: 100%;
+  }
+
+  header {
+    padding: 0 0;
+    height: 130px;
+    margin-bottom: 30px;
+  }
+  main {
+    padding: 0;
+  }
+  #search,
+  #lodging,
+  #popular,
+  #activity {
+    padding: 0 15px;
+  }
+
+  #topLogo {
+    margin-right: 147px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  #topNavbar {
+    width: 100%;
+  }
+  #topNavbar ul {
+    flex-wrap: nowrap;
+  }
+  #topNavbar li {
+    height: 50px;
+    margin-left: 0px;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .navLinkLodg {
+    border-bottom: solid 3px var(--blue);
+    border-top: none;
+    width: 50%;
+    margin-top: 1rem;
+  }
+  .navLinkAct {
+    border-bottom: solid 3px var(--grey);
+    width: 50%;
+    margin-top: 1rem;
+  }
+  .registerLink {
+    position: absolute;
+    padding: 0 0rem;
+    top: 1rem;
+    right: 0;
+  }
+  /*************************************************/
+  #searchSection {
+    /* width: 315px; */
+  }
+  .searchFilter {
+    padding: 0.625rem 0;
+  }
+  .fas.fa-search {
+    /*** Icône loupe recherche caché ***/
+    display: initial;
+  }
+
+  #searchInput {
+    width: 200px;
+  }
+
+  #searchButton span {
+    display: none;
+  }
+
+  #searchButton {
+    min-width: 50px;
+    border-radius: 15px;
+  }
+
+  /***********************************/
+
+  .grid-1,
+  .grid-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+  }
+  /**************************************/
+  .mainFooter {
+    flex-direction: column;
+  }
+  .footerNav {
+    margin-bottom: 2rem;
   }
 }
