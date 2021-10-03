@@ -20,6 +20,11 @@ body {
   max-width: 1440px;
   margin: auto;
 }
+h1,
+h2,
+h3 {
+  font-size: 1.4rem;
+}
 
 ul {
   list-style-type: none;
@@ -86,7 +91,7 @@ header {
 main {
   padding: 0 55px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 875px 420px;
   column-gap: 35px;
 }
 main img {
@@ -154,6 +159,10 @@ main img {
   display: none;
 }
 
+.searchFilter p {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 .searchFilter {
   display: flex;
   flex-wrap: wrap;
@@ -175,6 +184,7 @@ main img {
   align-items: center;
   justify-content: center;
   font-weight: 700;
+  font-size: 1.2rem;
   margin: 0 15px;
   padding-right: 15px;
   border: solid 2px var(--grey);
@@ -194,7 +204,6 @@ main img {
   border-radius: 50%;
   background-color: var(--blueLight);
   color: var(--blue);
-  display: inline-block;
   text-align: center;
   padding: 17px 0;
   margin-right: 15px;
@@ -207,21 +216,16 @@ main img {
 
 #searchInfo {
   display: flex;
-  align-items: center;
-  margin-top: 30px;
-  padding: 0 15px;
+  align-items: baseline;
+  margin-top: 20px;
 }
 #searchInfo i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 23px;
-  height: 23px;
-  font-size: 0.7rem;
+  margin-right: 0.6rem;
   border: solid 2px var(--grey);
   border-radius: 50%;
   color: var(--blue);
-  margin-right: 1rem;
+  font-size: 0.7rem;
+  padding: 6px 10px;
 }
 
 /****** Section Hébergements ******/
@@ -241,7 +245,7 @@ main img {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .card-container .card {
   width: 245px;
@@ -262,8 +266,8 @@ main img {
   padding: 7px 7px 3px 7px;
 }
 .card-body h4 {
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 1.07rem;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 
@@ -302,11 +306,11 @@ aside {
 aside .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 aside .container .card {
-  width: 340px;
+  width: 100%;
   height: 140px;
   margin-bottom: 30px;
   border: solid 5px white;
@@ -340,7 +344,7 @@ aside .container .card a figure {
   margin-bottom: 60px;
 }
 #activity h3 {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   margin-bottom: 30px;
 }
 .gridActivity {
@@ -349,9 +353,10 @@ aside .container .card a figure {
   column-gap: 40px;
 }
 .grid-1 {
+  /***Grille gauche en desktop et haute en smartphone***/
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.4fr 1fr;
+  grid-template-rows: 1.3fr 1fr;
   gap: 40px;
 }
 .grid-1 :nth-child(1) {
@@ -361,7 +366,7 @@ aside .container .card a figure {
 }
 
 .grid-2 {
-  display: grid;
+  display: grid; /***Grille droite en desktop et basse en smartphone***/
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 40px;
@@ -433,7 +438,7 @@ aside .container .card a figure {
 }
 
 .footerTitle {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 15px;
 }
 .footerNav a {
@@ -459,6 +464,10 @@ aside .container .card a figure {
     grid-column: 1;
     grid-area: search;
     margin-bottom: 40px;
+  }
+
+  .filterItems {
+    margin-bottom: 0.9rem;
   }
 
   #lodging {
@@ -490,7 +499,6 @@ aside .container .card a figure {
 
   .filterItems {
     margin-left: 0px;
-    margin-bottom: 0.9rem;
   }
   .itemsContainer {
     padding: 10px 0;
@@ -502,9 +510,6 @@ aside .container .card a figure {
   aside .container {
     align-items: center;
   }
-  aside .container .card {
-    width: 100%;
-  }
 
   .gridActivity {
     display: grid;
@@ -515,8 +520,13 @@ aside .container .card a figure {
 }
 
 @media (max-width: 600px) {
+  aside .container .card {
+    margin-bottom: 15px;
+  }
+
   .card-container .card {
     width: 100%;
+    margin-bottom: 15px;
   }
 
   header {
@@ -524,32 +534,37 @@ aside .container .card a figure {
     height: 130px;
     margin-bottom: 30px;
   }
+
   main {
     padding: 0;
   }
+
   #search,
   #lodging,
   #popular,
   #activity {
-    padding: 0 15px;
+    padding: 0 20px;
   }
 
   #topLogo {
     margin-right: 147px;
-    margin-left: 1rem;
+    margin-left: 1.25rem;
     margin-top: 1rem;
   }
+
   #topNavbar {
     width: 100%;
   }
+
   #topNavbar ul {
     flex-wrap: nowrap;
   }
+
   #topNavbar li {
     height: 50px;
     margin-left: 0px;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
   }
 
   .navLinkLodg {
@@ -570,32 +585,69 @@ aside .container .card a figure {
     right: 0;
   }
   /*************************************************/
+  #searchTitle h1 {
+    margin-bottom: 1rem;
+  }
+
+  #searchTitle {
+    margin-bottom: 2rem;
+  }
   #searchSection {
-    /* width: 315px; */
+    width: 335px;
+    /* margin: auto; */
   }
   .searchFilter {
     padding: 0.625rem 0;
   }
   .fas.fa-search {
-    /*** Icône loupe recherche caché ***/
-    display: initial;
+    display: initial; /*** Icône loupe recherche affiché en mode smartphone ***/
   }
 
   #searchInput {
-    width: 200px;
+    width: 230px;
   }
 
   #searchButton span {
-    display: none;
+    display: none; /*** Texte bouton caché en mode smartphone ***/
   }
 
   #searchButton {
-    min-width: 50px;
+    width: 50px;
     border-radius: 15px;
+  }
+
+  .searchFilter p {
+    margin-bottom: 0.5rem;
+  }
+
+  .filterItems {
+    margin-right: 5px;
+    font-size: 1rem;
+  }
+
+  #searchInfo {
+    margin: 0;
   }
 
   /***********************************/
 
+  #popular {
+    border-radius: 0;
+    padding-top: 2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  /***********************************/
+  #lodging {
+    border-radius: 0;
+    background-color: unset;
+    margin-bottom: 2.4rem;
+  }
+  .more {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  /***********************************/
   .grid-1,
   .grid-2 {
     grid-template-columns: 1fr;
@@ -604,6 +656,7 @@ aside .container .card a figure {
   /**************************************/
   .mainFooter {
     flex-direction: column;
+    padding: 50px 50px 0 30px;
   }
   .footerNav {
     margin-bottom: 2rem;
