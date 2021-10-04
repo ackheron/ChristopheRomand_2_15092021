@@ -14,6 +14,12 @@
   margin: 0;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Raleway", Verdana, Geneva, Tahoma, sans-serif;
   color: black;
@@ -45,9 +51,17 @@ input {
   color: var(--blue);
 }
 
+.card {
+  box-shadow: 0px 3px 20px rgb(153 153 153 / 30%);
+}
+
 .card:hover {
   transform: scale(1.05);
   transition: 0.3s;
+}
+
+.mainFooter a:hover {
+  font-weight: 700;
 }
 
 /******  HEADER ******/
@@ -75,7 +89,7 @@ header {
   margin-left: 15px;
 }
 .navLinkLodg {
-  border-top: solid 2px var(--blue);
+  border-top: solid 3px var(--blue);
 }
 .navLinkLodg a {
   color: var(--blue);
@@ -91,7 +105,7 @@ header {
 main {
   padding: 0 55px;
   display: grid;
-  grid-template-columns: 875px 420px;
+  grid-template-columns: 2fr 1fr;
   column-gap: 35px;
 }
 main img {
@@ -155,8 +169,7 @@ main img {
 }
 
 .fas.fa-search {
-  /*** Icône loupe recherche caché ***/
-  display: none;
+  display: none; /*** Icône loupe recherche caché en mode desktop***/
 }
 
 .searchFilter p {
@@ -234,8 +247,7 @@ main img {
   grid-column: 1 / 2;
   background-color: var(--grey);
   border-radius: 20px;
-  padding: 50px 40px;
-  padding-bottom: 0px; /**********A revoir*********/
+  padding: 50px 40px 0;
   margin-bottom: 60px;
 }
 
@@ -254,7 +266,6 @@ main img {
   border: solid 5px white;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0px 4px 20px #999;
   overflow: hidden;
 }
 
@@ -288,7 +299,7 @@ aside {
   background-color: var(--grey);
   border-radius: 20px;
   padding: 50px;
-  padding-bottom: 0px; /*********A revoir********/
+  padding-bottom: 0px;
   margin-bottom: 60px;
 }
 #popular-title {
@@ -316,7 +327,6 @@ aside .container .card {
   border: solid 5px white;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0px 4px 20px #999;
 
   overflow: hidden;
 }
@@ -353,8 +363,7 @@ aside .container .card a figure {
   column-gap: 40px;
 }
 .grid-1 {
-  /***Grille gauche en desktop et haute en smartphone***/
-  display: grid;
+  display: grid; /***Grille gauche en desktop et haute en smartphone***/
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1.3fr 1fr;
   gap: 40px;
@@ -378,15 +387,10 @@ aside .container .card a figure {
   grid-row-end: span 2;
 }
 
-/********************test****************/
-
 .grid-1 .card {
   height: 100%;
   min-height: 180px;
-  /* padding: 0 0 5px 0; */
   border-radius: 25px;
-  /* background-color: white; */
-  box-shadow: 0px 4px 20px #999;
   position: relative;
   overflow: hidden;
 }
@@ -395,8 +399,6 @@ aside .container .card a figure {
   min-height: 180px;
   padding: 0 0 5px 0;
   border-radius: 25px;
-  background-color: white;
-  box-shadow: 0px 4px 20px #999;
   position: relative;
   overflow: hidden;
 }
@@ -406,15 +408,11 @@ aside .container .card a figure {
   height: 100%;
   position: absolute;
   border-radius: 25px;
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
 }
 
 .card-body-activity {
   position: absolute;
   bottom: 0;
-  /* left: 0; */
   background: white;
   width: 100%;
   border-radius: 0 0 25px 25px;
@@ -426,7 +424,6 @@ aside .container .card a figure {
 .mainFooter {
   display: flex;
   justify-content: flex-start;
-  /* align-items: center; */
   min-height: 220px;
   padding: 50px;
   background-color: var(--grey);
@@ -475,8 +472,7 @@ aside .container .card a figure {
     grid-area: lodging;
     background-color: var(--grey);
     border-radius: 20px;
-    padding: 50px 40px;
-    padding-bottom: 0px; /**********A revoir*********/
+    padding: 50px 50px 0;
     margin-bottom: 60px;
   }
 
@@ -485,8 +481,7 @@ aside .container .card a figure {
     grid-area: aside;
     background-color: var(--grey);
     border-radius: 20px;
-    padding: 50px;
-    padding-bottom: 0px; /*********A revoir********/
+    padding: 50px 50px 0;
     margin-bottom: 60px;
   }
 }
