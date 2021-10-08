@@ -26,6 +26,18 @@ body {
   max-width: 1440px;
   margin: auto;
 }
+
+input::-webkit-input-placeholder {
+  font-family: "Raleway", Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+input::-moz-placeholder {
+  opacity: 1;
+  font-family: "Raleway", Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
 h1,
 h2,
 h3 {
@@ -40,6 +52,7 @@ a {
   text-decoration: none;
   color: black;
 }
+
 button,
 input {
   border: none;
@@ -49,6 +62,10 @@ input {
 .blueStars {
   font-size: 0.7rem;
   color: var(--blue);
+}
+
+.greyStars {
+  color: #d9d9d9;
 }
 
 .card {
@@ -88,9 +105,11 @@ header {
   padding: 0 30px;
   margin-left: 15px;
 }
+
 .navLinkLodg {
   border-top: solid 3px var(--blue);
 }
+
 .navLinkLodg a {
   color: var(--blue);
 }
@@ -108,6 +127,7 @@ main {
   grid-template-columns: 2fr 1fr;
   column-gap: 35px;
 }
+
 main img {
   width: 100%;
   object-fit: cover;
@@ -176,6 +196,7 @@ main img {
   font-weight: 700;
   font-size: 1.2rem;
 }
+
 .searchFilter {
   display: flex;
   flex-wrap: wrap;
@@ -232,6 +253,7 @@ main img {
   align-items: baseline;
   margin-top: 20px;
 }
+
 #searchInfo i {
   margin-right: 0.6rem;
   border: solid 2px var(--grey);
@@ -254,11 +276,13 @@ main img {
 #lodging h2 {
   margin-bottom: 30px;
 }
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .card-container .card {
   width: 245px;
   height: 200px;
@@ -298,10 +322,11 @@ aside {
   grid-column: 2 / 3;
   background-color: var(--grey);
   border-radius: 20px;
-  padding: 50px;
+  padding: 50px 40px 40px;
   padding-bottom: 0px;
   margin-bottom: 60px;
 }
+
 #popular-title {
   display: flex;
   align-items: center;
@@ -330,10 +355,12 @@ aside .container .card {
 
   overflow: hidden;
 }
+
 .imgPopular {
   width: 130px;
   height: 140px;
 }
+
 aside .container .card a figure {
   display: flex;
 }
@@ -353,21 +380,24 @@ aside .container .card a figure {
   grid-column: 1 / 3;
   margin-bottom: 60px;
 }
+
 #activity h3 {
-  /* font-size: 1.5rem; */
   margin-bottom: 30px;
 }
+
 .gridActivity {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
 }
+
 .grid-1 {
   display: grid; /***Grille gauche en desktop et haute en smartphone***/
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1.3fr 1fr;
   gap: 40px;
 }
+
 .grid-1 :nth-child(1) {
   grid-column-start: 1;
   grid-row-start: 1;
@@ -397,17 +427,16 @@ aside .container .card a figure {
 .grid-2 .card {
   height: 100%;
   min-height: 180px;
-  padding: 0 0 5px 0;
   border-radius: 25px;
   position: relative;
   overflow: hidden;
 }
 
 .card-img-activity {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   position: absolute;
-  border-radius: 25px;
+  border-radius: 25px 25px 30px 30px;
 }
 
 .card-body-activity {
@@ -431,7 +460,7 @@ aside .container .card a figure {
 
 .footerNav {
   width: 450px;
-  margin-right: auto;
+  margin-right: 20px;
 }
 
 .footerTitle {
@@ -447,7 +476,6 @@ aside .container .card a figure {
 
 @media (max-width: 1200px) {
   main {
-    /* display: grid; */
     grid-template-columns: 1fr;
     column-gap: 0rem;
     grid-template-areas:
@@ -568,18 +596,22 @@ aside .container .card a figure {
     width: 50%;
     margin-top: 1rem;
   }
+
   .navLinkAct {
     border-bottom: solid 3px var(--grey);
     width: 50%;
     margin-top: 1rem;
   }
+
   .registerLink {
     position: absolute;
     padding: 0 0rem;
     top: 1rem;
     right: 0;
   }
+
   /*************************************************/
+
   #searchTitle h1 {
     margin-bottom: 1rem;
   }
@@ -589,17 +621,13 @@ aside .container .card a figure {
   }
   #searchSection {
     width: 335px;
-    /* margin: auto; */
   }
   .searchFilter {
     padding: 0.625rem 0;
   }
+
   .fas.fa-search {
     display: initial; /*** Icône loupe recherche affiché en mode smartphone ***/
-  }
-
-  #searchInput {
-    width: 230px;
   }
 
   #searchButton span {
@@ -638,22 +666,46 @@ aside .container .card a figure {
     background-color: unset;
     margin-bottom: 2.4rem;
   }
+
   .more {
     margin-bottom: 1rem;
     font-size: 1.2rem;
   }
+
   /***********************************/
+
   .grid-1,
   .grid-2 {
     grid-template-columns: 1fr;
     grid-template-rows: 3fr;
   }
+
   /**************************************/
+
   .mainFooter {
     flex-direction: column;
     padding: 50px 50px 0 30px;
   }
+
   .footerNav {
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 374px) {
+  #searchSection {
+    width: 255px;
+  }
+
+  #searchSection label {
+    display: none;
+  }
+
+  #searchSection input {
+    width: 205px;
+  }
+
+  .filterItems {
+    margin-right: 10px;
   }
 }
