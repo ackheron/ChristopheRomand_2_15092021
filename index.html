@@ -13,6 +13,8 @@
 
 <body>
 
+    <!-- bloc header "logo et navbar" -->
+
     <header>
 
         <div id="topLogo">
@@ -28,18 +30,25 @@
 
     </header>
 
+    <!-- Contenu principal avec sections "recherches, hébergements, populaires, activités -->
+
     <main>
 
+        <!-- Début de la section recherches et filtres -->
+
         <section id="search">
+
             <div id="searchTitle">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
+
             <div id="searchSection">
                 <label for="searchInput"><i class="fas fa-map-marker-alt"></i></label>
                 <input type="search" name="searchInput" id="searchInput" placeholder="Marseille, France" />
                 <button id="searchButton"><span>Rechercher</span><i class="fas fa-search"></i></button>
             </div>
+
             <div class="searchFilter">
                 <p>Filtres</p>
                 <ul class="itemsContainer">
@@ -49,17 +58,21 @@
                     <li class="filterItems"><i class="fas fa-dog"></i>Animaux autorisés</li>
                 </ul>
             </div>
+
             <div id="searchInfo">
                 <i class="fas fa-info"></i>
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
+
         </section>
 
+        <!-- Début de la section "Hébergements à Marseille" -->
+
         <section id="lodging">
+
             <h2>Hébergements à Marseille</h2>
 
             <div class="card-container">
-
                 <div class="card">
                     <a href="sources/images/hebergements/1_xlarge/cannebière.jpg" target="_blank">
                         <figure>
@@ -80,6 +93,7 @@
                         </figure>
                     </a>
                 </div>
+
                 <div class="card">
                     <a href="sources/images/hebergements/1_xlarge/hôtelDuPort.jpg" target="_blank">
                         <figure>
@@ -100,6 +114,7 @@
                         </figure>
                     </a>
                 </div>
+
                 <div class="card">
                     <a href="sources/images/hebergements/1_xlarge/lesMouettes.jpg" target="_blank">
                         <figure>
@@ -120,6 +135,7 @@
                         </figure>
                     </a>
                 </div>
+
                 <div class="card">
                     <a href="sources/images/hebergements/1_xlarge/hôtelDeLaMer.jpg" target="_blank">
                         <figure>
@@ -140,6 +156,7 @@
                         </figure>
                     </a>
                 </div>
+
                 <div class="card">
                     <a href="sources/images/hebergements/1_xlarge/aubergeLePanier.jpg" target="_blank">
                         <figure>
@@ -161,6 +178,7 @@
                         </figure>
                     </a>
                 </div>
+
                 <div class="card">
                     <a href="sources/images/hebergements/1_xlarge/chezAmina.jpg" target="_blank">
                         <figure>
@@ -183,14 +201,20 @@
                 </div>
 
             </div>
+
             <p class="more">Afficher plus</p>
+
         </section>
 
+        <!-- Début de la section "Les plus populaires" -->
+
         <aside id="popular">
+
             <div id="popular-title">
                 <h3>Les plus populaires</h3>
                 <i class="fas fa-chart-line fa-2x"></i>
             </div>
+
             <div class="container">
                 <div class="card">
                     <a href="sources/images/hebergements/1_xlarge/soleilDuMatin.jpg" target="_blank">
@@ -213,6 +237,7 @@
                         </figure>
                     </a>
                 </div>
+
                 <div class="card">
                     <a href="sources/images/hebergements/1_xlarge/auCoeurDeLeau.jpg" target="_blank">
                         <figure>
@@ -234,6 +259,7 @@
                         </figure>
                     </a>
                 </div>
+
                 <div class="card">
                     <a href="sources/images/hebergements/1_xlarge/toutBleuToutBlanc.jpg" target="_blank">
                         <figure>
@@ -255,13 +281,21 @@
                         </figure>
                     </a>
                 </div>
+
             </div>
+
         </aside>
 
+        <!-- Début de la section "Activités à Marseille" -->
+
         <section id="activity">
+
             <h3>Activités à Marseille</h3>
+
             <div class="gridActivity">
+
                 <div class="grid-1">
+
                     <div class="card">
                         <a href="sources/images/activites/1_xlarge/vieuxPort.jpg" target="_blank">
                             <figure>
@@ -273,6 +307,7 @@
                             </figure>
                         </a>
                     </div>
+
                     <div class="card">
                         <a href="sources/images/activites/1_xlarge/pomègues.jpg" target="_blank">
                             <figure>
@@ -284,6 +319,7 @@
                             </figure>
                         </a>
                     </div>
+
                     <div class="card">
                         <a href="sources/images/activites/1_xlarge/frioul.jpg" target="_blank">
                             <figure>
@@ -295,8 +331,11 @@
                             </figure>
                         </a>
                     </div>
+
                 </div>
+
                 <div class="grid-2">
+
                     <div class="card">
                         <a href="sources/images/activites/1_xlarge/calanques.jpg" target="_blank">
                             <figure class="card-img">
@@ -308,6 +347,7 @@
                             </figure>
                         </a>
                     </div>
+
                     <div class="card">
                         <a href="sources/images/activites/1_xlarge/laGarde.jpg" target="_blank">
                             <figure>
@@ -319,6 +359,7 @@
                             </figure>
                         </a>
                     </div>
+
                     <div class="card">
                         <a href="sources/images/activites/1_xlarge/longchamp.jpg" target="_blank">
                             <figure>
@@ -330,20 +371,30 @@
                             </figure>
                         </a>
                     </div>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
+    <!-- Bloc Footer "A propos, Nos hébergements, Assistance" -->
+
     <footer class="mainFooter">
+
         <nav class="footerNav">
             <h5 class="footerTitle">A propos</h5>
 
-            <a href="#">Fonctionnement du site</a>
-            <a href="#">Conditions générales de vente</a>
-            <a href="#">Données et confidentialité</a>
+            <ul>
+                <li><a href="#">Fonctionnement du site</a></li>
+                <li><a href="#">Conditions générales de vente</a></li>
+                <li><a href="#">Données et confidentialité</a></li>
+            </ul>
 
         </nav>
+
         <nav class="footerNav">
             <h5 class="footerTitle">Nos hébergements</h5>
             <ul>
@@ -351,6 +402,7 @@
                 <li><a href="#">Soumettre votre hôtel</a></li>
             </ul>
         </nav>
+
         <nav class="footerNav">
             <h5 class="footerTitle">Assistance</h5>
             <ul>
