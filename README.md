@@ -4,10 +4,10 @@
 
 ### Projet numéro 2 "Transformez une maquette en site web"
 
-<p float="left" alig>
-    <img src="sources/Capture%20d’écran%202021-10-18%20à%2009.48.54_ipad_silver_portrait.png" width="200">
-    <img src="sources/Capture%20d’écran%202021-10-18%20à%2009.51.48_iphone12black_portrait.png" width="150">
-    <img src="sources/Capture%20d’écran%202021-10-18%20à%2010.15.18_imac2015retina_front.png" width="300">
+<p float="left">
+    <img src="sources/ipad_silver_portrait.png" width="300">
+    <img src="sources/iphone12black_portrait.png" width="200">
+    <img src="sources/imac2015retina_front.png" width="400">
 </p>
 
 ### Scénario
