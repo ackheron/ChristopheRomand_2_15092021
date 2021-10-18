@@ -4,11 +4,12 @@
 
 ### Projet numéro 2 "Transformez une maquette en site web"
 
-<p float="left">
+<!-- <p float="left">
     <img src="sources/ipad_silver_portrait.png" width="300">
     <img src="sources/iphone12black_portrait.png" width="200">
     <img src="sources/imac2015retina_front.png" width="400">
-</p>
+</p> -->
+<img src="sources/montageMARDOWN.png">
 
 ### Scénario
 
