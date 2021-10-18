@@ -114,15 +114,13 @@ header {
   border-top: solid 3px var(--blue);
 }
 
-.navLinkLodg a {
-  /* color: var(--blue); */
-}
-
 .registerLink a {
   color: var(--blue);
   font-weight: 700;
 }
+
 /************/
+
 #topNavbar li:hover {
   border-top: solid 3px var(--blue);
 }
@@ -550,7 +548,7 @@ aside .container .card a figure {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   /*** tablettes "ipad" et liseuses "kindle" ***/
 
   header,
