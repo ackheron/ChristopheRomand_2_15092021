@@ -16,4 +16,5 @@ Enfin, vous avez trouvé votre premier stage en tant que développeur web chez R
 
 Un nouveau design basé sur les principes du Material Design vient d’être proposé par Loïc, designer UI.
 
+**_Maquette desktop_**
 ![maquette](sources/Desktop%20-%201.png)
